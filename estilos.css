@@ -38,29 +38,25 @@ html {scroll-behavior: smooth;}
 }
 
 
-/* 4. Variables y base .............................................................. */
+/* colores y letras */
 :root {
-    /* Colores */
-    --color-bg:         #faf9f7;
-    --color-surface:    #f2f0ec;
-    --color-text:       #2a2420;
-    --color-muted:      #7a6f68;
-    --color-accent:     #b87a5a;
-    --color-accent-dark:#8f5c3e;
-    --color-border:     #ddd8d2;
+    --color-bg:         #FF9999;
+    --color-surface:    #FF5E5E;
+    --color-text:       #01431E;
+    --color-muted:      #000000;
+    --color-accent:     #FF0000;
+    --color-accent-dark:#AD0000;
+    --color-border:     #000000;
     --color-white:      #ffffff;
-    --color-nav-bg:     rgba(250,249,247,0.95);
+    --color-nav-bg:     #B5FF94;
 
-    /* Tipografías */
     --font-display:     'Cormorant Garamond', Georgia, serif;
     --font-body:        'Jost', sans-serif;
 
-    /* Espaciado */
     --section-padding:  5rem 0;
     --container-width:  1100px;
     --nav-height:       70px;
 
-    /* Transiciones */
     --transition:       all 0.3s ease;
 }
 
@@ -90,7 +86,7 @@ body {
     background: var(--color-nav-bg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 2px solid #5A854C;
     height: var(--nav-height);
 }
 
@@ -109,7 +105,7 @@ body {
     font-size: 1.6rem;
     font-weight: 600;
     letter-spacing: 0.12em;
-    color: var(--color-text);
+    color: #000000;
 }
 
 .nav__menu {
@@ -124,7 +120,7 @@ body {
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--color-text);
+    color: #000000;
     position: relative;
     padding-bottom: 3px;
 }
@@ -136,7 +132,7 @@ body {
     left: 0;
     width: 0;
     height: 1px;
-    background: var(--color-accent);
+    background: #000000;
     transition: width 0.3s ease;
 }
 
@@ -147,7 +143,7 @@ body {
 
 .nav__link:hover,
 .nav__link:focus {
-    color: var(--color-accent);
+    color: #000000;
 }
 
 /* boton móvil */
@@ -281,7 +277,7 @@ body {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 300;
     letter-spacing: 0.08em;
-    color: var(--color-text);
+    color: #000000;
     margin-bottom: 0.6rem;
 }
 
@@ -617,7 +613,7 @@ body {
     color: rgba(255,255,255,0.5);
     text-align: center;
     padding: 2.5rem 1.5rem;
-    border-top: 3px solid var(--color-accent);
+    border-top: 3px solid #016D29;
 }
 
 .footer__social {
