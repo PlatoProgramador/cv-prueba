@@ -1,29 +1,7 @@
-/*
-ÍNDICE:
-1. Normalización
-2. Reset
-3. Estilos propios
-4. Variables y base
-5. Header / Nav
-6. Hero
-7. Secciones generales
-8. Sobre mí
-9. Portfolio
-10. Lightbox
-11. Contacto / Formulario
-12. Footer
-13. Responsive
-*/
-
-/* 1. Normalización ........................................................................... */
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 button,hr,input{overflow:visible}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}details,main{display:block}h1{font-size:2em;margin:.67em 0}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{padding:.35em .75em .625em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
 
-/* 2. Reset ........................................................................... */
-/* Reset.css v2.0 | License: none (public domain) | http://meyerweb.com/eric/tools/css/reset/ */
 a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
 
-/* 3. Estilos propios ................................................................. */
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }
 a { text-decoration: none; transition: all 0.3s linear; word-wrap: break-word; }
@@ -37,10 +15,7 @@ html { scroll-behavior: smooth; }
     html { scroll-behavior: auto; }
 }
 
-
-/* 4. Variables y base .............................................................. */
 :root {
-    /* Colores */
     --color-bg:         #faf9f7;
     --color-surface:    #f2f0ec;
     --color-text:       #2a2420;
@@ -50,17 +25,11 @@ html { scroll-behavior: smooth; }
     --color-border:     #ddd8d2;
     --color-white:      #ffffff;
     --color-nav-bg:     rgba(250,249,247,0.95);
-
-    /* Tipografías */
     --font-display:     'Cormorant Garamond', Georgia, serif;
     --font-body:        'Jost', sans-serif;
-
-    /* Espaciado */
     --section-padding:  5rem 0;
     --container-width:  1100px;
     --nav-height:       70px;
-
-    /* Transiciones */
     --transition:       all 0.3s ease;
 }
 
@@ -80,7 +49,6 @@ body {
 }
 
 
-/* 5. Header / Nav .............................................................. */
 .header {
     position: fixed;
     top: 0;
@@ -150,7 +118,6 @@ body {
     color: var(--color-accent);
 }
 
-/* Botón hamburguesa */
 .nav__toggle {
     display: none;
     flex-direction: column;
@@ -180,8 +147,6 @@ body {
     transform: translateY(-7px) rotate(-45deg);
 }
 
-
-/* 6. Hero .............................................................. */
 .hero {
     position: relative;
     height: 100vh;
@@ -269,8 +234,6 @@ body {
     border-color: rgba(255,255,255,0.7);
 }
 
-
-/* 7. Secciones generales .............................................................. */
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -293,7 +256,6 @@ body {
     margin: 0 auto;
 }
 
-/* Botones */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -334,8 +296,6 @@ body {
     color: var(--color-white);
 }
 
-
-/* 8. Sobre mí .............................................................. */
 .sobre-mi {
     padding: var(--section-padding);
     padding-top: calc(var(--nav-height) + 4rem);
@@ -374,39 +334,6 @@ body {
     margin-bottom: 1.8rem;
 }
 
-/* Reloj */
-.reloj {
-    text-align: center;
-    padding: 1.4rem 2rem;
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: 4px;
-    max-width: 340px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.reloj__fecha {
-    font-family: var(--font-body);
-    font-size: 0.8rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-}
-
-.reloj__hora {
-    font-family: var(--font-display);
-    font-size: 2.4rem;
-    font-weight: 300;
-    color: var(--color-text);
-    letter-spacing: 0.06em;
-}
-
-
-/* 9. Portfolio .............................................................. */
 .portfolio {
     padding: var(--section-padding);
     background: var(--color-surface);
@@ -462,8 +389,6 @@ body {
     transform: translateY(0);
 }
 
-
-/* 10. Lightbox .............................................................. */
 .lightbox {
     display: none;
     position: fixed;
@@ -554,8 +479,6 @@ body {
 .lightbox__nav--prev { left: 1.5rem; }
 .lightbox__nav--next { right: 1.5rem; }
 
-
-/* 11. Contacto / Formulario .............................................................. */
 .contacto {
     padding: var(--section-padding);
 }
@@ -642,7 +565,6 @@ body {
 }
 
 
-/* 12. Footer .............................................................. */
 .footer {
     background: var(--color-text);
     color: rgba(255,255,255,0.5);
@@ -683,10 +605,6 @@ body {
     text-transform: uppercase;
 }
 
-
-/* 13. Responsive .............................................................. */
-
-/* Tablet */
 @media (max-width: 900px) {
     .portfolio__grid {
         grid-template-columns: repeat(3, 1fr);
@@ -694,7 +612,7 @@ body {
 }
 
 @media (max-width: 700px) {
-    /* Menú hamburguesa */
+
     .nav__toggle {
         display: flex;
     }
@@ -730,7 +648,6 @@ body {
 
     .nav__link::after { display: none; }
 
-    /* Sobre mí en columna */
     .sobre-mi__grid {
         grid-template-columns: 1fr;
         text-align: center;
@@ -742,12 +659,10 @@ body {
         justify-content: center;
     }
 
-    /* Portfolio 2 columnas */
     .portfolio__grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    /* Formulario en columna */
     .form__row {
         grid-template-columns: 1fr;
     }
