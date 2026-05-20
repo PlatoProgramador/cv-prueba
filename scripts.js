@@ -13,34 +13,55 @@
 (function () {
     'use strict';
 
-    /* =========================================================
-       1. MENÚ HAMBURGUESA
-       ========================================================= */
-    const navToggle = document.getElementById('navToggle');
-    const navMenu   = document.getElementById('navMenu');
+const menuButton = document.getElementById('navToggle');
+const menu = document.getElementById('navMenu');
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function () {
-            const isOpen = navMenu.classList.toggle('is-open');
-            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
+if (menuButton && menu) {
 
-        // Cerrar menú al hacer clic en un enlace
-        navMenu.querySelectorAll('.nav__link').forEach(function (link) {
-            link.addEventListener('click', function () {
-                navMenu.classList.remove('is-open');
-                navToggle.setAttribute('aria-expanded', 'false');
-            });
-        });
+    const closeMenu = () => {
+        menu.classList.remove('is-open');
+        menuButton.classList.remove('is-active');
+        menuButton.setAttribute('aria-expanded', 'false');
+    };
 
-        // Cerrar menú si se pulsa fuera
-        document.addEventListener('click', function (e) {
-            if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
-                navMenu.classList.remove('is-open');
-                navToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    }
+    const openMenu = () => {
+        menu.classList.add('is-open');
+        menuButton.classList.add('is-active');
+        menuButton.setAttribute('aria-expanded', 'true');
+    };
+
+    menuButton.addEventListener('click', () => {
+
+        const isOpen = menu.classList.contains('is-open');
+
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    document.querySelectorAll('.nav__link').forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('click', event => {
+
+        const clickInsideMenu = menu.contains(event.target);
+        const clickOnButton = menuButton.contains(event.target);
+
+        if (!clickInsideMenu && !clickOnButton) {
+            closeMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+
+        if (window.innerWidth > 768) {
+            closeMenu();
+        }
+    });
+}
 
 
     /* =========================================================
